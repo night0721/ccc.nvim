@@ -59,7 +59,7 @@ local function on_exit()
     for _, func in ipairs(config.on_close) do
         func()
     end
-    checkFile("/tmp/fm-nvim")
+    checkFile("/tmp/ccc.nvim")
     checkFile(vim.fn.getenv("HOME") .. "/.cache/ccc/opened_file")
     vim.cmd [[ checktime ]]
 end
@@ -73,28 +73,28 @@ local function postCreation(suffix)
         M.buf,
         "t",
         config.mappings.edit,
-        '<C-\\><C-n>:lua require("fm-nvim").setMethod("edit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("edit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(
         M.buf,
         "t",
         config.mappings.tabedit,
-        '<C-\\><C-n>:lua require("fm-nvim").setMethod("tabedit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("tabedit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(
         M.buf,
         "t",
         config.mappings.horz_split,
-        '<C-\\><C-n>:lua require("fm-nvim").setMethod("split | edit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("split | edit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(
         M.buf,
         "t",
         config.mappings.vert_split,
-        '<C-\\><C-n>:lua require("fm-nvim").setMethod("vsplit | edit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("vsplit | edit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(M.buf, "t", "<ESC>", config.mappings.ESC, {silent = true})
@@ -152,9 +152,9 @@ function M.Ccc(dir)
 end
 function M.Fnf()
     if config.ui.default == "float" then
-        createWin(config.cmds.fnf_cmd .. " > /tmp/fm-nvim", "<CR>")
+        createWin(config.cmds.fnf_cmd .. " > /tmp/ccc.nvim", "<CR>")
     elseif config.ui.default == "split" then
-        createSplit(config.cmds.fnf_cmd .. " > /tmp/fm-nvim", "<CR>")
+        createSplit(config.cmds.fnf_cmd .. " > /tmp/ccc.nvim", "<CR>")
     end
 end
 return M
