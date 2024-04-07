@@ -38,13 +38,13 @@
 <details>
 <summary>Screenshots</summary>
 
-##### [Fzy](https://github.com/jhawthorn/fzy)
+##### [fnf](https://github.com/leo-arch/fnf)
 
-![Fzy](https://user-images.githubusercontent.com/57725322/142956916-bd78371f-6308-4559-ae55-0014d18b16bb.png)
+![fnf](https://user-images.githubusercontent.com/57725322/142956916-bd78371f-6308-4559-ae55-0014d18b16bb.png)
 
-##### [Fff](https://github.com/dylanaraps/fff)
+##### [ccc](https://github.com/night0721/ccc)
 
-![Fff](https://user-images.githubusercontent.com/57725322/142956906-2eb5d0f1-4a27-4b50-90f8-442cbe6b0cdb.png)
+![ccc](https://user-images.githubusercontent.com/57725322/142956906-2eb5d0f1-4a27-4b50-90f8-442cbe6b0cdb.png)
 
 </details>
 </p>
@@ -106,7 +106,7 @@ require('ccc.nvim').setup{
 	-- Terminal commands used w/ file manager (have to be in your $PATH)
 	cmds = {
         ccc_cmd     = "ccc",
-		fzy_cmd     = "find . | fnf",
+        fnf_cmd     = "find . | fnf",
 	},
 
 	-- Mappings used with the plugin
@@ -178,33 +178,11 @@ require('ccc.nvim').setup{
 }
 ```
 
-or you could map `<ESC>` to quit in your file manager...
-
-Example for [Lf](https://github.com/gokcehan/lf):
-
-```
-map <esc> :quit
-```
-
 Q: Am I able to have image previews?
 
-A: Yes and no. Assuming you are on Linux, it is possible with the help of tools like [Überzug](https://github.com/seebye/ueberzug). If you are on Mac or Windows, it is not possible.
+A: Not yet
+<!-- A: Yes and no. Assuming you are on Linux, it is possible with the help of tools like [Überzug](https://github.com/seebye/ueberzug). If you are on Mac or Windows, it is not possible. -->
 
 Q: Can I use splits instead of a floating window
 
 A: It's possible by changing the "default" option in the "ui" table to "split"
-
-Q: Why isn't my `Broot` configuration working?
-
-A: In order to support `Broot`, a custom configuration file is used, however, you can change this by modifying the `broot_conf` option to your configuration. Just be sure to include the following in your config file...
-```
-{
-	verbs: [
-		{
-			key: enter
-			execution: ":print_path"
-			apply_to: file
-		}
-	]
-}
-```
