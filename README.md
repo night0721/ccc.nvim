@@ -40,7 +40,7 @@
 
 ##### [fnf](https://github.com/leo-arch/fnf)
 
-![fnf](https://user-images.githubusercontent.com/57725322/142956916-bd78371f-6308-4559-ae55-0014d18b16bb.png)
+![fnf](https://github.com/night0721/ccc.nvim/assets/77528305/db8ca2e2-1df8-4eed-9888-2e578ff888c0)
 
 ##### [ccc](https://github.com/night0721/ccc)
 
