@@ -44,7 +44,7 @@
 
 ##### [ccc](https://github.com/night0721/ccc)
 
-![ccc](https://user-images.githubusercontent.com/57725322/142956906-2eb5d0f1-4a27-4b50-90f8-442cbe6b0cdb.png)
+![ccc](https://github.com/night0721/ccc.nvim/assets/77528305/8ae753e4-7f16-4d44-b466-ea3c7ab78c41)
 
 </details>
 </p>
