@@ -73,28 +73,28 @@ local function postCreation(suffix)
         M.buf,
         "t",
         config.mappings.edit,
-        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("edit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc").setMethod("edit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(
         M.buf,
         "t",
         config.mappings.tabedit,
-        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("tabedit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc").setMethod("tabedit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(
         M.buf,
         "t",
         config.mappings.horz_split,
-        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("split | edit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc").setMethod("split | edit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(
         M.buf,
         "t",
         config.mappings.vert_split,
-        '<C-\\><C-n>:lua require("ccc.nvim").setMethod("vsplit | edit")<CR>i' .. suffix,
+        '<C-\\><C-n>:lua require("ccc").setMethod("vsplit | edit")<CR>i' .. suffix,
         {silent = true}
     )
     vim.api.nvim_buf_set_keymap(M.buf, "t", "<ESC>", config.mappings.ESC, {silent = true})
