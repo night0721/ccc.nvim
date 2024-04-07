@@ -61,7 +61,7 @@
 The following configuration contains the defaults so if you find them satisfactory, there is no need to use the setup function.
 
 ```lua
-require('ccc.nvim').setup{
+require('ccc').setup{
 	-- (Vim) Command used to open files
 	edit_cmd = "edit",
 
@@ -156,7 +156,7 @@ local function yourFunction()
 	-- Your code goes here
 end
 
-require('ccc.nvim').setup{
+require('ccc').setup{
 	-- Runs yourFunction() upon exiting the floating window (can only be a function)
 	on_close = { yourFunction },
 
@@ -170,7 +170,7 @@ Q: What if I want to map `<ESC>` to close the window?
 A: You can do this by mapping `<ESC>` to whatever closes your file manager (note that this may bring up other issues). This can be done with the following code...
 
 ```lua
-require('ccc.nvim').setup{
+require('ccc').setup{
 	mappings = {
 		-- Example for Vifm
 		ESC        = ":q<CR>"
